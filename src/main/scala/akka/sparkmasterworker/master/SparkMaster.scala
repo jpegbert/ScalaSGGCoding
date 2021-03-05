@@ -1,5 +1,6 @@
 package akka.sparkmasterworker.master
 
+import akka.actor.{Actor, ActorSystem, Props}
 import akka.sparkmasterworker.common._
 import com.typesafe.config.ConfigFactory
 

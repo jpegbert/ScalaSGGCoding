@@ -1,7 +1,5 @@
 package chapter18.generic
 
-import temp.generic.SeasonEnum
-
 object GenericDemo02 {
   def main(args: Array[String]): Unit = {
 
