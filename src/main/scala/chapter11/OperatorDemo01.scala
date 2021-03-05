@@ -1,5 +1,7 @@
 package chapter11
 
+import scala.language.postfixOps
+
 object OperatorDemo01 {
   def main(args: Array[String]): Unit = {
 
@@ -15,6 +17,7 @@ object OperatorDemo01 {
 
     println("monster.money=" + monster.money) // 20
 
+    // 这里使用的 ++ 需要导入 import scala.language.postfixOps
     println(monster++)
     println(monster.++)
     println("monster.money=" + monster.money) // 22

@@ -5,6 +5,7 @@ import akka.sparkmasterworker.common.{HeartBeat, RegisterWorkerInfo, RegisteredW
 import com.typesafe.config.ConfigFactory
 
 import scala.concurrent.duration._
+import scala.language.postfixOps
 
 class SparkWorker(masterHost:String,masterPort:Int,masterName:String) extends Actor{
   //masterProxy是Master的代理/引用ref
@@ -32,6 +33,7 @@ class SparkWorker(masterHost:String,masterPort:Int,masterName:String) extends Ac
       //2. 3000 millis 表示每隔3秒执行一次
       //3. self:表示发给自己
       //4. SendHeartBeat 发送的内容
+      // 这里使用的 millis 需要导入 import scala.language.postfixOps
       context.system.scheduler.schedule(0 millis, 3000 millis, self, SendHeartBeat)
 
     }

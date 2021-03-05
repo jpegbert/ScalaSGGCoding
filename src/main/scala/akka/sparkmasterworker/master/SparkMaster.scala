@@ -6,6 +6,7 @@ import com.typesafe.config.ConfigFactory
 
 import scala.collection.mutable
 import scala.concurrent.duration._
+import scala.language.postfixOps
 
 class SparkMaster extends Actor {
   //定义个hm,管理workers
@@ -45,6 +46,7 @@ class SparkMaster extends Actor {
       //2. 9000 millis 表示每隔3秒执行一次
       //3. self:表示发给自己
       //4. RemoveTimeOutWorker 发送的内容
+      // 这里使用的 millis 需要导入 import scala.language.postfixOps
       context.system.scheduler.schedule(0 millis, 9000 millis, self, RemoveTimeOutWorker)
     }
     //对RemoveTimeOutWorker消息处理

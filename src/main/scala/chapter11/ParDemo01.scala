@@ -1,5 +1,8 @@
 package chapter11
 
+//import scala.collection.parallel.immutable._
+import scala.collection.parallel.CollectionConverters._
+
 object ParDemo01 {
   def main(args: Array[String]): Unit = {
 
