@@ -7,7 +7,7 @@ object Details01 {
     val tiger2 = test01(10, tiger)
     println(tiger2.name) // jack
     println(tiger.name) // jack
-    println(tiger.hashCode() + " " + tiger2.hashCode())
+    println(tiger.hashCode() + " " + tiger2.hashCode()) // 846063400 846063400
 
   }
 

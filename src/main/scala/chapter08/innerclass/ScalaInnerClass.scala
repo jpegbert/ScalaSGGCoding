@@ -1,7 +1,5 @@
 package chapter08.innerclass
 
-import chapter08.innerclass
-
 object ScalaInnerClassDemo {
   def main(args: Array[String]): Unit = {
     //测试1. 创建了两个外部类的实例
